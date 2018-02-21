@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D131CD1203D0EAC00D07C26 /* KOBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CD0203D0EAC00D07C26 /* KOBaseViewController.swift */; };
+		5D131CD3203D0EFC00D07C26 /* KOHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CD2203D0EFC00D07C26 /* KOHomeViewController.swift */; };
+		5D131CD5203D0F5B00D07C26 /* KOMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CD4203D0F5B00D07C26 /* KOMessageViewController.swift */; };
+		5D131CD7203D0F7200D07C26 /* KODiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CD6203D0F7200D07C26 /* KODiscoverViewController.swift */; };
+		5D131CD9203D0F8000D07C26 /* KOProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CD8203D0F8000D07C26 /* KOProfileViewController.swift */; };
+		5D131CDD203D198D00D07C26 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CDC203D198D00D07C26 /* Foundation+Extension.swift */; };
+		5D131CDF203D607300D07C26 /* KOBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CDE203D607300D07C26 /* KOBaseNavigationController.swift */; };
 		5D4C3BF0203C4E240006988F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3BEF203C4E240006988F /* AppDelegate.swift */; };
 		5D4C3BF2203C4E240006988F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF1203C4E240006988F /* ViewController.swift */; };
-		5D4C3BF5203C4E240006988F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF3203C4E240006988F /* Main.storyboard */; };
 		5D4C3BF7203C4E240006988F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF6203C4E240006988F /* Assets.xcassets */; };
-		5D4C3BFA203C4E240006988F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF8203C4E240006988F /* LaunchScreen.storyboard */; };
 		5D4C3C05203C4E240006988F /* KOWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3C04203C4E240006988F /* KOWeiBoTests.swift */; };
 		5D4C3C10203C4E240006988F /* KOWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3C0F203C4E240006988F /* KOWeiBoUITests.swift */; };
+		5DAFCB7E203C60D700161556 /* KOMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D131CD0203D0EAC00D07C26 /* KOBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOBaseViewController.swift; sourceTree = "<group>"; };
+		5D131CD2203D0EFC00D07C26 /* KOHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOHomeViewController.swift; sourceTree = "<group>"; };
+		5D131CD4203D0F5B00D07C26 /* KOMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOMessageViewController.swift; sourceTree = "<group>"; };
+		5D131CD6203D0F7200D07C26 /* KODiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KODiscoverViewController.swift; sourceTree = "<group>"; };
+		5D131CD8203D0F8000D07C26 /* KOProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOProfileViewController.swift; sourceTree = "<group>"; };
+		5D131CDC203D198D00D07C26 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		5D131CDE203D607300D07C26 /* KOBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOBaseNavigationController.swift; sourceTree = "<group>"; };
 		5D4C3BEC203C4E240006988F /* KOWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4C3BEF203C4E240006988F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D4C3BF1203C4E240006988F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5D4C3BF4203C4E240006988F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D4C3BF6203C4E240006988F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5D4C3BF9203C4E240006988F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D4C3BFB203C4E240006988F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D4C3C00203C4E240006988F /* KOWeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOWeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4C3C04203C4E240006988F /* KOWeiBoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOWeiBoTests.swift; sourceTree = "<group>"; };
@@ -47,6 +58,7 @@
 		5D4C3C0B203C4E240006988F /* KOWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4C3C0F203C4E240006988F /* KOWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOWeiBoUITests.swift; sourceTree = "<group>"; };
 		5D4C3C11203C4E240006988F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOMainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D131CCD203D0ACC00D07C26 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				5D131CD4203D0F5B00D07C26 /* KOMessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		5D131CCE203D0AE700D07C26 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				5D131CD6203D0F7200D07C26 /* KODiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		5D131CCF203D0DD900D07C26 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5D131CD8203D0F8000D07C26 /* KOProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5D131CDA203D136B00D07C26 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5D131CDB203D139500D07C26 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5D131CDB203D139500D07C26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5D131CDC203D198D00D07C26 /* Foundation+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5D4C3BE3203C4E240006988F = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +149,11 @@
 		5D4C3BEE203C4E240006988F /* KOWeiBo */ = {
 			isa = PBXGroup;
 			children = (
+				5D131CDA203D136B00D07C26 /* Utilities */,
+				5D4C3C1E203C5E4B0006988F /* MainClasses */,
 				5D4C3BEF203C4E240006988F /* AppDelegate.swift */,
 				5D4C3BF1203C4E240006988F /* ViewController.swift */,
-				5D4C3BF3203C4E240006988F /* Main.storyboard */,
 				5D4C3BF6203C4E240006988F /* Assets.xcassets */,
-				5D4C3BF8203C4E240006988F /* LaunchScreen.storyboard */,
 				5D4C3BFB203C4E240006988F /* Info.plist */,
 			);
 			path = KOWeiBo;
@@ -123,6 +175,36 @@
 				5D4C3C11203C4E240006988F /* Info.plist */,
 			);
 			path = KOWeiBoUITests;
+			sourceTree = "<group>";
+		};
+		5D4C3C1E203C5E4B0006988F /* MainClasses */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFCB7C203C600300161556 /* Home */,
+				5D131CCD203D0ACC00D07C26 /* Message */,
+				5D131CCE203D0AE700D07C26 /* Discover */,
+				5D131CCF203D0DD900D07C26 /* Profile */,
+				5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */,
+				5D4C3C1F203C5EC20006988F /* Base */,
+			);
+			path = MainClasses;
+			sourceTree = "<group>";
+		};
+		5D4C3C1F203C5EC20006988F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5D131CD0203D0EAC00D07C26 /* KOBaseViewController.swift */,
+				5D131CDE203D607300D07C26 /* KOBaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5DAFCB7C203C600300161556 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D131CD2203D0EFC00D07C26 /* KOHomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +269,7 @@
 		5D4C3BE4203C4E240006988F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KO;
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Korune;
@@ -232,9 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4C3BFA203C4E240006988F /* LaunchScreen.storyboard in Resources */,
 				5D4C3BF7203C4E240006988F /* Assets.xcassets in Resources */,
-				5D4C3BF5203C4E240006988F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D131CD7203D0F7200D07C26 /* KODiscoverViewController.swift in Sources */,
 				5D4C3BF2203C4E240006988F /* ViewController.swift in Sources */,
+				5D131CDD203D198D00D07C26 /* Foundation+Extension.swift in Sources */,
+				5D131CD9203D0F8000D07C26 /* KOProfileViewController.swift in Sources */,
+				5D131CDF203D607300D07C26 /* KOBaseNavigationController.swift in Sources */,
+				5D131CD1203D0EAC00D07C26 /* KOBaseViewController.swift in Sources */,
+				5D131CD5203D0F5B00D07C26 /* KOMessageViewController.swift in Sources */,
+				5DAFCB7E203C60D700161556 /* KOMainTabBarController.swift in Sources */,
+				5D131CD3203D0EFC00D07C26 /* KOHomeViewController.swift in Sources */,
 				5D4C3BF0203C4E240006988F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,25 +383,6 @@
 			targetProxy = 5D4C3C0C203C4E240006988F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5D4C3BF3203C4E240006988F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D4C3BF4203C4E240006988F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5D4C3BF8203C4E240006988F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D4C3BF9203C4E240006988F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5D4C3C12203C4E240006988F /* Debug */ = {
@@ -363,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -426,13 +496,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KOWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Korune.KOWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -440,13 +511,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KOWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Korune.KOWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
