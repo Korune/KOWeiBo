@@ -73,7 +73,7 @@ extension KOMainTabBarController {
         vc.tabBarItem.selectedImage = UIImage(named: imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
         vc.tabBarItem.setTitleTextAttributes(
             [NSAttributedStringKey.foregroundColor : UIColor.orange],
-            for: .highlighted)
+            for: .selected)
         vc.tabBarItem.setTitleTextAttributes(
             [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12)],
             for:.normal)
@@ -83,6 +83,7 @@ extension KOMainTabBarController {
     }
     
     fileprivate func setupComposeButton() {
+        
         tabBar.addSubview(composeButton)
         
         let count = childViewControllers.count

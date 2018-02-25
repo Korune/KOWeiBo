@@ -14,6 +14,7 @@
 		5D131CD9203D0F8000D07C26 /* KOProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CD8203D0F8000D07C26 /* KOProfileViewController.swift */; };
 		5D131CDD203D198D00D07C26 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CDC203D198D00D07C26 /* Foundation+Extension.swift */; };
 		5D131CDF203D607300D07C26 /* KOBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CDE203D607300D07C26 /* KOBaseNavigationController.swift */; };
+		5D26E0882042C6AD00D4F943 /* UIButton+KOAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D26E0872042C6AD00D4F943 /* UIButton+KOAddition.m */; };
 		5D4C3BF0203C4E240006988F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3BEF203C4E240006988F /* AppDelegate.swift */; };
 		5D4C3BF2203C4E240006988F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF1203C4E240006988F /* ViewController.swift */; };
 		5D4C3BF7203C4E240006988F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF6203C4E240006988F /* Assets.xcassets */; };
@@ -47,6 +48,10 @@
 		5D131CD8203D0F8000D07C26 /* KOProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOProfileViewController.swift; sourceTree = "<group>"; };
 		5D131CDC203D198D00D07C26 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
 		5D131CDE203D607300D07C26 /* KOBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOBaseNavigationController.swift; sourceTree = "<group>"; };
+		5D26E0822042C46F00D4F943 /* KOWeiBo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KOWeiBo-Bridging-Header.h"; sourceTree = "<group>"; };
+		5D26E0862042C6AD00D4F943 /* UIButton+KOAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+KOAddition.h"; sourceTree = "<group>"; };
+		5D26E0872042C6AD00D4F943 /* UIButton+KOAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KOAddition.m"; sourceTree = "<group>"; };
+		5D26E0892042E2DF00D4F943 /* KOAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KOAddition.h; sourceTree = "<group>"; };
 		5D4C3BEC203C4E240006988F /* KOWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4C3BEF203C4E240006988F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D4C3BF1203C4E240006988F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 		5D131CDA203D136B00D07C26 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5D26E0852042C62700D4F943 /* Categories */,
 				5D131CDB203D139500D07C26 /* Extensions */,
 			);
 			path = Utilities;
@@ -124,6 +130,16 @@
 				5D131CDC203D198D00D07C26 /* Foundation+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5D26E0852042C62700D4F943 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5D26E0892042E2DF00D4F943 /* KOAddition.h */,
+				5D26E0862042C6AD00D4F943 /* UIButton+KOAddition.h */,
+				5D26E0872042C6AD00D4F943 /* UIButton+KOAddition.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		5D4C3BE3203C4E240006988F = {
@@ -152,6 +168,7 @@
 				5D131CDA203D136B00D07C26 /* Utilities */,
 				5D4C3C1E203C5E4B0006988F /* MainClasses */,
 				5D4C3BEF203C4E240006988F /* AppDelegate.swift */,
+				5D26E0822042C46F00D4F943 /* KOWeiBo-Bridging-Header.h */,
 				5D4C3BF1203C4E240006988F /* ViewController.swift */,
 				5D4C3BF6203C4E240006988F /* Assets.xcassets */,
 				5D4C3BFB203C4E240006988F /* Info.plist */,
@@ -276,6 +293,7 @@
 				TargetAttributes = {
 					5D4C3BEB203C4E240006988F = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					5D4C3BFF203C4E240006988F = {
@@ -349,6 +367,7 @@
 				5D131CD5203D0F5B00D07C26 /* KOMessageViewController.swift in Sources */,
 				5DAFCB7E203C60D700161556 /* KOMainTabBarController.swift in Sources */,
 				5D131CD3203D0EFC00D07C26 /* KOHomeViewController.swift in Sources */,
+				5D26E0882042C6AD00D4F943 /* UIButton+KOAddition.m in Sources */,
 				5D4C3BF0203C4E240006988F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,11 +516,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KOWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Korune.KOWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KOWeiBo/KOWeiBo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -512,11 +534,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KOWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Korune.KOWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KOWeiBo/KOWeiBo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

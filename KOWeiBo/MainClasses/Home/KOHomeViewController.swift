@@ -13,12 +13,19 @@ class KOHomeViewController: KOBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let button = UIButton()
+        view.addSubview(button)
+        button.setTitle("Push", for: .normal)
+        button.setTitleColor(UIColor.orange, for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: #selector(testPush), for: .touchUpInside)
+        button.center = view.center
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func testPush() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = UIColor.white
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
