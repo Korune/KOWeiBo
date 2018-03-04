@@ -17,19 +17,26 @@ class KOMainTabBarController: UITabBarController {
         setupComposeButton()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    /*
+     portrait    : 竖屏，肖像
+     landscape   : 横屏，风景画
+     
+     - 使用代码控制设备的方向，好处，可以在在需要横屏的时候，单独处理！
+     - 设置支持的方向之后，当前的控制器及子控制器都会遵守这个方向！
+     - 如果播放视频，通常是通过 modal 展现的！
+     */
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
     
     // @objc 允许这个函数在运行时通过 OC 的消息机制被调用
-    @objc fileprivate func composeStatus() {
+    @objc private func composeStatus() {
         NSLog("撰写微博")
     }
     
     // MARK: -
     /// 撰写微博按钮
-    fileprivate lazy var composeButton: UIButton = {
+    private lazy var composeButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named:"tabbar_compose_button"), for: .normal)
         button.setImage(UIImage(named:"tabbar_compose_icon_add"), for: .normal)
@@ -41,7 +48,7 @@ class KOMainTabBarController: UITabBarController {
 
 extension KOMainTabBarController {
     
-    fileprivate func setupChildControllers() {
+    private func setupChildControllers() {
         let infos = [
             ["clsName" : "KOHomeViewController", "title" : "首页", "imageName" : "tabbar_home"],
             ["clsName" : "KOMessageViewController", "title" : "消息", "imageName" : "tabbar_message_center"],
@@ -57,7 +64,7 @@ extension KOMainTabBarController {
     }
     
     /// 从字典加载 ViewControlelr
-    fileprivate func controller(dict: [String : String]) -> UIViewController {
+    private func controller(dict: [String : String]) -> UIViewController {
         guard let className = dict["clsName"],
             let title = dict["title"],
             let imageName = dict["imageName"],
@@ -82,7 +89,7 @@ extension KOMainTabBarController {
         return nav
     }
     
-    fileprivate func setupComposeButton() {
+    private func setupComposeButton() {
         
         tabBar.addSubview(composeButton)
         

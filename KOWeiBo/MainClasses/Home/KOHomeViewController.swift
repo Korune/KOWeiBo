@@ -8,25 +8,37 @@
 
 import UIKit
 
+private let cellID = "cellID";
+
 class KOHomeViewController: KOBaseViewController {
 
+    private lazy var statusList = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let button = UIButton()
-        view.addSubview(button)
-        button.setTitle("Push", for: .normal)
-        button.setTitleColor(UIColor.orange, for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: #selector(testPush), for: .touchUpInside)
-        button.center = view.center
+        
+        loadData()
     }
 
-    @objc func testPush() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.white
-        navigationController?.pushViewController(vc, animated: true)
+    override func loadData() {
+        for i in 0..<15 {
+            statusList.insert(i.description, at: 0)
+        }
     }
 }
 
-
+extension KOHomeViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statusList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+        }
+        cell?.textLabel?.text = statusList[indexPath.row]
+        return cell!
+    }
+}

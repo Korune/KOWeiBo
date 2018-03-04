@@ -13,6 +13,7 @@ class KOBaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 如果滑动移除控制器的功能失效(由于自定义了 viewController.navigationItem.leftBarButtonItem)，清空代理(让导航控制器重新设置这个功能)
+        
         interactivePopGestureRecognizer?.delegate = nil
     }
 
