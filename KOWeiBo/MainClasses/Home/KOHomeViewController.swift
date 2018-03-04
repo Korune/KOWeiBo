@@ -21,8 +21,18 @@ class KOHomeViewController: KOBaseViewController {
     }
 
     override func loadData() {
-        for i in 0..<15 {
-            statusList.insert(i.description, at: 0)
+        // 模拟延迟加载
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            for i in 0..<15 {
+                if self.isPullup {
+                    self.statusList.append("上拉" + i.description)
+                } else {
+                    self.statusList.insert(i.description, at: 0)
+                }
+            }
+            self.refreshControl?.endRefreshing()
+            self.isPullup = false
+            self.tableView?.reloadData()
         }
     }
 }
