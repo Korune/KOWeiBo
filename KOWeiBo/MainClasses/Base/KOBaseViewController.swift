@@ -23,6 +23,8 @@ class KOBaseViewController: UIViewController {
     var refreshControl: UIRefreshControl?
     /// 上拉刷新标记
     var isPullup = false
+    /// 用户登录标记
+    var userLogon = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +44,7 @@ extension KOBaseViewController {
     
     private func setupUI() {
         setupNavigationBar()
-        setupTableView()
+        userLogon ? setupTableView() : setupVisitorView()
     }
     
     private func setupNavigationBar() {
@@ -58,6 +60,11 @@ extension KOBaseViewController {
         refreshControl = UIRefreshControl()
         tableView?.addSubview(refreshControl!)
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+    }
+    
+    private func setupVisitorView() {
+        let visitorView = KOVisitorView(frame: view.bounds)
+        view.addSubview(visitorView)
     }
 }
 

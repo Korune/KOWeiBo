@@ -26,4 +26,21 @@
                            normalColor:(UIColor *)normalColor
                       highlightedColor:(UIColor *)highlightedColor;
 
+
+/**
+ 创建带背景图片的文本按钮
+
+ @param title            标题文字
+ @param fontSize         字体大小
+ @param normalColor      默认颜色
+ @param highlightedColor 高亮颜色
+ @param backgroundImage  背景图片
+ @return 按钮
+ */
++ (instancetype)ko_textButtonWithTitle:(NSString *)title
+                              fontSize:(CGFloat)fontSize
+                           normalColor:(UIColor *)normalColor
+                      highlightedColor:(UIColor *)highlightedColor
+                       backgroundImage:(UIImage *)backgroundImage;
+
 @end

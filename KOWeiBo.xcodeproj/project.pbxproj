@@ -15,11 +15,13 @@
 		5D131CDD203D198D00D07C26 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CDC203D198D00D07C26 /* Foundation+Extension.swift */; };
 		5D131CDF203D607300D07C26 /* KOBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D131CDE203D607300D07C26 /* KOBaseNavigationController.swift */; };
 		5D26E0882042C6AD00D4F943 /* UIButton+KOAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D26E0872042C6AD00D4F943 /* UIButton+KOAddition.m */; };
+		5D273CCF204C378E0066211A /* KOVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D273CCE204C378E0066211A /* KOVisitorView.swift */; };
 		5D4C3BF0203C4E240006988F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3BEF203C4E240006988F /* AppDelegate.swift */; };
 		5D4C3BF2203C4E240006988F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF1203C4E240006988F /* ViewController.swift */; };
 		5D4C3BF7203C4E240006988F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4C3BF6203C4E240006988F /* Assets.xcassets */; };
 		5D4C3C05203C4E240006988F /* KOWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3C04203C4E240006988F /* KOWeiBoTests.swift */; };
 		5D4C3C10203C4E240006988F /* KOWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3C0F203C4E240006988F /* KOWeiBoUITests.swift */; };
+		5D5593FD204CCF6D006DC67A /* UIColor+KOAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5593FC204CCF6D006DC67A /* UIColor+KOAddition.m */; };
 		5DAFCB7E203C60D700161556 /* KOMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		5D26E0862042C6AD00D4F943 /* UIButton+KOAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+KOAddition.h"; sourceTree = "<group>"; };
 		5D26E0872042C6AD00D4F943 /* UIButton+KOAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KOAddition.m"; sourceTree = "<group>"; };
 		5D26E0892042E2DF00D4F943 /* KOAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KOAddition.h; sourceTree = "<group>"; };
+		5D273CCE204C378E0066211A /* KOVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOVisitorView.swift; sourceTree = "<group>"; };
 		5D4C3BEC203C4E240006988F /* KOWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4C3BEF203C4E240006988F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D4C3BF1203C4E240006988F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 		5D4C3C0B203C4E240006988F /* KOWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4C3C0F203C4E240006988F /* KOWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOWeiBoUITests.swift; sourceTree = "<group>"; };
 		5D4C3C11203C4E240006988F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D5593FB204CCF6D006DC67A /* UIColor+KOAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+KOAddition.h"; sourceTree = "<group>"; };
+		5D5593FC204CCF6D006DC67A /* UIColor+KOAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KOAddition.m"; sourceTree = "<group>"; };
 		5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOMainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,8 +143,26 @@
 				5D26E0892042E2DF00D4F943 /* KOAddition.h */,
 				5D26E0862042C6AD00D4F943 /* UIButton+KOAddition.h */,
 				5D26E0872042C6AD00D4F943 /* UIButton+KOAddition.m */,
+				5D5593FB204CCF6D006DC67A /* UIColor+KOAddition.h */,
+				5D5593FC204CCF6D006DC67A /* UIColor+KOAddition.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		5D273CCC204C36FA0066211A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5D273CCD204C376E0066211A /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5D273CCD204C376E0066211A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D273CCE204C378E0066211A /* KOVisitorView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D4C3BE3203C4E240006988F = {
@@ -197,12 +220,13 @@
 		5D4C3C1E203C5E4B0006988F /* MainClasses */ = {
 			isa = PBXGroup;
 			children = (
+				5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */,
 				5DAFCB7C203C600300161556 /* Home */,
 				5D131CCD203D0ACC00D07C26 /* Message */,
 				5D131CCE203D0AE700D07C26 /* Discover */,
 				5D131CCF203D0DD900D07C26 /* Profile */,
-				5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */,
 				5D4C3C1F203C5EC20006988F /* Base */,
+				5D273CCC204C36FA0066211A /* Other */,
 			);
 			path = MainClasses;
 			sourceTree = "<group>";
@@ -359,8 +383,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D131CD7203D0F7200D07C26 /* KODiscoverViewController.swift in Sources */,
+				5D5593FD204CCF6D006DC67A /* UIColor+KOAddition.m in Sources */,
 				5D4C3BF2203C4E240006988F /* ViewController.swift in Sources */,
 				5D131CDD203D198D00D07C26 /* Foundation+Extension.swift in Sources */,
+				5D273CCF204C378E0066211A /* KOVisitorView.swift in Sources */,
 				5D131CD9203D0F8000D07C26 /* KOProfileViewController.swift in Sources */,
 				5D131CDF203D607300D07C26 /* KOBaseNavigationController.swift in Sources */,
 				5D131CD1203D0EAC00D07C26 /* KOBaseViewController.swift in Sources */,
