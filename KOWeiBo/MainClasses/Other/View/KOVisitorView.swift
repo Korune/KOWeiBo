@@ -9,6 +9,27 @@
 import UIKit
 
 class KOVisitorView: UIView {
+    
+    /// 使用字典设置访客视图的信息
+    var visitorInfo: [String: String]? {
+        didSet {
+            guard let imageName = visitorInfo?["imageName"],
+                let message = visitorInfo?["message"]
+                else {
+                    return
+            }
+            tipLabel.text = message
+             // 设置图像，首页不需要设置
+            if imageName == "" {
+                startAnimation()
+                return
+            }
+            iconImageView.image = UIImage(named: imageName)
+            // 其他控制器的访客视图不需要显示小房子/遮罩视图
+            houseImageView.isHidden = true
+            maskImageView.isHidden = true
+        }
+    }
 
     override init(frame: CGRect) {
         super .init(frame: frame)
@@ -18,6 +39,15 @@ class KOVisitorView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func startAnimation() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.toValue = 2 * Double.pi
+        animation.duration = 15
+        animation.repeatCount = MAXFLOAT
+        animation.isRemovedOnCompletion = false
+        iconImageView.layer.add(animation, forKey: nil)
     }
     
     // MARK: - 私有控件

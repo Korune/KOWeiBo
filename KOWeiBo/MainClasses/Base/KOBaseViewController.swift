@@ -25,6 +25,8 @@ class KOBaseViewController: UIViewController {
     var isPullup = false
     /// 用户登录标记
     var userLogon = false
+    /// 访客视图信息字典
+    var visitorInfo: [String: String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +67,7 @@ extension KOBaseViewController {
     private func setupVisitorView() {
         let visitorView = KOVisitorView(frame: view.bounds)
         view.addSubview(visitorView)
+        visitorView.visitorInfo = visitorInfo
     }
 }
 

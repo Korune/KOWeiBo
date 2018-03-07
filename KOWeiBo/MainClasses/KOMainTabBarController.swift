@@ -49,12 +49,16 @@ class KOMainTabBarController: UITabBarController {
 extension KOMainTabBarController {
     
     private func setupChildControllers() {
+
         let infos = [
-            ["clsName" : "KOHomeViewController", "title" : "首页", "imageName" : "tabbar_home"],
-            ["clsName" : "KOMessageViewController", "title" : "消息", "imageName" : "tabbar_message_center"],
+            ["clsName" : "KOHomeViewController", "title" : "首页", "imageName" : "tabbar_home", "visitorInfo": ["imageName": "", "message": "关注一些人，回这里看看有什么惊喜"]],
+            ["clsName" : "KOMessageViewController", "title" : "消息", "imageName" : "tabbar_message_center",
+             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，别人评论你的微博，发给你的消息，都会在这里收到通知"]],
             ["clsName" : "UIViewController"],
-            ["clsName" : "KODiscoverViewController", "title" : "发现", "imageName" : "tabbar_discover"],
-            ["clsName" : "KOProfileViewController", "title" : "我", "imageName" : "tabbar_profile"]
+            ["clsName" : "KODiscoverViewController", "title" : "发现", "imageName" : "tabbar_discover",
+             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，最新、最热微博尽在掌握，不再会与实事潮流擦肩而过"]],
+            ["clsName" : "KOProfileViewController", "title" : "我", "imageName" : "tabbar_profile",
+             "visitorInfo": ["imageName": "visitordiscover_image_profile", "message": "登录后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
         ]
         var vcs = [UIViewController]()
         for dict in infos {
@@ -64,11 +68,12 @@ extension KOMainTabBarController {
     }
     
     /// 从字典加载 ViewControlelr
-    private func controller(dict: [String : String]) -> UIViewController {
-        guard let className = dict["clsName"],
-            let title = dict["title"],
-            let imageName = dict["imageName"],
-            let cls = NSClassFromString(Bundle.main.ko_namespace + "." + className) as? KOBaseViewController.Type
+    private func controller(dict: [String : Any]) -> UIViewController {
+        guard let className = dict["clsName"] as? String,
+            let title = dict["title"] as? String,
+            let imageName = dict["imageName"] as? String,
+            let cls = NSClassFromString(Bundle.main.ko_namespace + "." + className) as? KOBaseViewController.Type,
+            let visitorInfo = dict["visitorInfo"] as? [String: String]
             
             else {
                 return UIViewController();
@@ -76,6 +81,7 @@ extension KOMainTabBarController {
         
         let vc = cls.init()
         vc.title = title
+        vc.visitorInfo = visitorInfo
         vc.tabBarItem.image = UIImage(named: imageName)
         vc.tabBarItem.selectedImage = UIImage(named: imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
         vc.tabBarItem.setTitleTextAttributes(
