@@ -22,6 +22,7 @@
 		5D4C3C05203C4E240006988F /* KOWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3C04203C4E240006988F /* KOWeiBoTests.swift */; };
 		5D4C3C10203C4E240006988F /* KOWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4C3C0F203C4E240006988F /* KOWeiBoUITests.swift */; };
 		5D5593FD204CCF6D006DC67A /* UIColor+KOAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5593FC204CCF6D006DC67A /* UIColor+KOAddition.m */; };
+		5D8DE1DD2058077700B6EA19 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D8DE1DC2058077700B6EA19 /* main.json */; };
 		5DAFCB7E203C60D700161556 /* KOMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		5D4C3C11203C4E240006988F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D5593FB204CCF6D006DC67A /* UIColor+KOAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+KOAddition.h"; sourceTree = "<group>"; };
 		5D5593FC204CCF6D006DC67A /* UIColor+KOAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KOAddition.m"; sourceTree = "<group>"; };
+		5D8DE1DC2058077700B6EA19 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		5DAFCB7D203C60D700161556 /* KOMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOMainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 		5D4C3BEE203C4E240006988F /* KOWeiBo */ = {
 			isa = PBXGroup;
 			children = (
+				5D8DE1DB2058073D00B6EA19 /* Resources */,
 				5D131CDA203D136B00D07C26 /* Utilities */,
 				5D4C3C1E203C5E4B0006988F /* MainClasses */,
 				5D4C3BEF203C4E240006988F /* AppDelegate.swift */,
@@ -238,6 +241,14 @@
 				5D131CDE203D607300D07C26 /* KOBaseNavigationController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		5D8DE1DB2058073D00B6EA19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D8DE1DC2058077700B6EA19 /* main.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5DAFCB7C203C600300161556 /* Home */ = {
@@ -357,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8DE1DD2058077700B6EA19 /* main.json in Resources */,
 				5D4C3BF7203C4E240006988F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
