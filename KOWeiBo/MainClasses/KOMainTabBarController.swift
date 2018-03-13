@@ -49,23 +49,16 @@ class KOMainTabBarController: UITabBarController {
 extension KOMainTabBarController {
     
     private func setupChildControllers() {
-
-        let infos = [
-            ["clsName" : "KOHomeViewController", "title" : "首页", "imageName" : "tabbar_home", "visitorInfo": ["imageName": "", "message": "关注一些人，回这里看看有什么惊喜"]],
-            ["clsName" : "KOMessageViewController", "title" : "消息", "imageName" : "tabbar_message_center",
-             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，别人评论你的微博，发给你的消息，都会在这里收到通知"]],
-            ["clsName" : "UIViewController"],
-            ["clsName" : "KODiscoverViewController", "title" : "发现", "imageName" : "tabbar_discover",
-             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，最新、最热微博尽在掌握，不再会与实事潮流擦肩而过"]],
-            ["clsName" : "KOProfileViewController", "title" : "我", "imageName" : "tabbar_profile",
-             "visitorInfo": ["imageName": "visitordiscover_image_profile", "message": "登录后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
-        ]
-        
-        let data = try? JSONSerialization.data(withJSONObject: infos, options: [.prettyPrinted])
-        (data as NSData?)?.write(toFile: "/Users/korune/Desktop/main.json", atomically: true)
+        // 从 bundle 加载配置的 json
+        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
+            let data = NSData(contentsOfFile: path),
+        let infos = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [[String: Any]]
+        else {
+            return
+        }
         
         var vcs = [UIViewController]()
-        for dict in infos {
+        for dict in infos! {
             vcs.append(controller(dict: dict))
         }
         viewControllers = vcs
