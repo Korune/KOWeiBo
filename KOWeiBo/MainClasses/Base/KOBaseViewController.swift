@@ -68,6 +68,25 @@ extension KOBaseViewController {
         let visitorView = KOVisitorView(frame: view.bounds)
         view.addSubview(visitorView)
         visitorView.visitorInfo = visitorInfo
+        /*
+         使用代理与 addTarget 方法的讨论：
+         1. 使用代理传递消息是为了在控制器和视图之间的解耦，让视图能够被多个控制器复用，例如 UITableView。
+         2. 但是如果视图仅仅为了代码封装，而从控制器中剥离出来，并确认该视图不会被其他控制器引用，则可以直接使用 addTarget 方法为该视图添加监听方法。
+         3. 使用 addTarget 的代价是耦合度搞，控制器和视图绑定在一起，但是会省略部分冗余代码。
+         */
+        visitorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        visitorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
+    }
+}
+
+extension KOBaseViewController {
+    
+    @objc private func login() {
+        NSLog("点击了登陆按钮")
+    }
+    
+    @objc private func register() {
+        NSLog("点击了注册按钮")
     }
 }
 

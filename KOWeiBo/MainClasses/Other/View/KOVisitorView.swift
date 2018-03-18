@@ -10,6 +10,17 @@ import UIKit
 
 class KOVisitorView: UIView {
     
+    lazy var registerButton: UIButton = UIButton.ko_textButton(withTitle: "注册",
+                                                               fontSize: 16,
+                                                               normalColor: UIColor.orange,
+                                                               highlightedColor: UIColor.darkGray,
+                                                               backgroundImage: UIImage(named:"common_button_white_disable"))
+    lazy var loginButton: UIButton = UIButton.ko_textButton(withTitle: "登录",
+                                                            fontSize: 16,
+                                                            normalColor: UIColor.darkGray,
+                                                            highlightedColor: UIColor.black,
+                                                            backgroundImage: UIImage(named:"common_button_white_disable"))
+    
     /// 使用字典设置访客视图的信息
     var visitorInfo: [String: String]? {
         didSet {
@@ -63,16 +74,7 @@ class KOVisitorView: UIView {
         
         return label
     }()
-    private lazy var registerButton: UIButton = UIButton.ko_textButton(withTitle: "注册",
-                                                                       fontSize: 16,
-                                                                       normalColor: UIColor.orange,
-                                                                       highlightedColor: UIColor.darkGray,
-                                                                       backgroundImage: UIImage(named:"common_button_white_disable"))
-    private lazy var loginButton: UIButton = UIButton.ko_textButton(withTitle: "登录",
-                                                                       fontSize: 16,
-                                                                       normalColor: UIColor.darkGray,
-                                                                       highlightedColor: UIColor.black,
-                                                                       backgroundImage: UIImage(named:"common_button_white_disable"))
+
     /// 遮罩图像 - 不要使用 maskView
     private lazy var maskImageView: UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_mask_smallicon"))
 }
