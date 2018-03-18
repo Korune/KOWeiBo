@@ -15,13 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        
         window?.rootViewController = KOMainTabBarController()
-        
         window?.makeKeyAndVisible()
+        
+        loadAppInfos()
         
         return true
     }
@@ -47,7 +46,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate {
+    
+    /// 模拟从服务器异步加载应用程序信息
+    private func loadAppInfos() {
+        DispatchQueue.global().async {
+            guard let url = Bundle.main.url(forResource: "main.json", withExtension: nil),
+                let data = NSData(contentsOf: url)
+                else {
+                    return
+            }
+            let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let jsonPath = (documentPath as NSString).appendingPathComponent(documentPath)
+            // 直接保存在沙盒，等待下一次程序启动使用！
+            data.write(toFile: jsonPath, atomically: true)
+        }
+    }
 }
 

@@ -49,10 +49,18 @@ class KOMainTabBarController: UITabBarController {
 extension KOMainTabBarController {
     
     private func setupChildControllers() {
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let jsonPath = (docDir as NSString).appendingPathComponent("main.json")
+        var data = NSData(contentsOfFile: jsonPath)
+        // 判断 data 是否有内容，如果没有，说明本地沙盒没有文件
+        if data == nil {
+            let path = Bundle.main.path(forResource: "main.json", ofType: nil)
+            data = NSData(contentsOfFile: path!)
+        }
+        
         // 从 bundle 加载配置的 json
-        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
-            let data = NSData(contentsOfFile: path),
-        let infos = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [[String: Any]]
+        guard (data != nil),
+            let infos = try? JSONSerialization.jsonObject(with: data! as Data, options: []) as? [[String: Any]]
         else {
             return
         }
