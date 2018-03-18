@@ -35,8 +35,14 @@ class KOHomeViewController: KOBaseViewController {
             self.tableView?.reloadData()
         }
     }
+    
+    @objc func showFriends() {
+        
+    }
 }
 
+
+// MARK: - UITableView 相关代理和数据源方法
 extension KOHomeViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,3 +58,18 @@ extension KOHomeViewController {
         return cell!
     }
 }
+
+extension KOHomeViewController {
+    
+    override func setupTableView() {
+        super .setupTableView()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .plain, target: self, action: #selector(showFriends))
+    }
+}
+
+
+
+
+
+

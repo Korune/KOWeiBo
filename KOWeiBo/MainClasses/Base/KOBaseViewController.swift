@@ -50,10 +50,10 @@ extension KOBaseViewController {
     }
     
     private func setupNavigationBar() {
-        
+        navigationController?.navigationBar.tintColor = UIColor.orange
     }
     
-    private func setupTableView() {
+    @objc func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         view.addSubview(tableView!)
         tableView?.delegate = self
@@ -68,6 +68,7 @@ extension KOBaseViewController {
         let visitorView = KOVisitorView(frame: view.bounds)
         view.addSubview(visitorView)
         visitorView.visitorInfo = visitorInfo
+        
         /*
          使用代理与 addTarget 方法的讨论：
          1. 使用代理传递消息是为了在控制器和视图之间的解耦，让视图能够被多个控制器复用，例如 UITableView。
@@ -76,6 +77,9 @@ extension KOBaseViewController {
          */
         visitorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         visitorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: .plain, target: self, action: #selector(login))
     }
 }
 
